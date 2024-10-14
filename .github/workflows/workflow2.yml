@@ -1,0 +1,31 @@
+name: wf1
+on: push
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: download code from github to runner
+      uses: actions/checkout@v4
+    - name: install depen.
+      run: npm ci
+    - name: lint
+  j2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download code from github to runner
+        uses: actions/checkout@v4
+      - name: install depen.
+        run: npm ci
+      - name: test
+        run: npm run test
+  j3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download code from github to runner
+        uses: actions/checkout@v4
+      - name: install depen.
+        run: npm ci
+      - name: build
+        run: npm run build
+      - name: deploy
+        run: echo "deploy"
