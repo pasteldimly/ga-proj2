@@ -1,0 +1,8 @@
+name: wf3
+on: issues
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output event details
+        run: echo ${{ toJSON(github.event) }}
