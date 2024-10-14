@@ -11,6 +11,7 @@ jobs:
       - name: lint
         run: npm run lint
   j2:
+    needs: j1
     runs-on: ubuntu-latest
     steps:
       - name: download code from github to runner
@@ -20,6 +21,7 @@ jobs:
       - name: test
         run: npm run test
   j3:
+    needs: j2
     runs-on: ubuntu-latest
     steps:
       - name: download code from github to runner
