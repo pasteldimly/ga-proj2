@@ -4,11 +4,11 @@ jobs:
   j1:
     runs-on: ubuntu-latest
     steps:
-    - name: download code from github to runner
-      uses: actions/checkout@v4
-    - name: install depen.
-      run: npm ci
-    - name: lint
+      - name: download code from github to runner
+        uses: actions/checkout@v4
+      - name: install depen.
+        run: npm ci
+      - name: lint
   j2:
     runs-on: ubuntu-latest
     steps:
