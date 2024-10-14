@@ -1,4 +1,4 @@
-name: wf1
+name: wf2
 on: push
 jobs:
   j1:
